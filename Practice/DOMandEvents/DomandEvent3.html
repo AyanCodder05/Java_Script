@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and Events </title>
+</head>
+<body>
+    <input type="text" class="text" placeholder="Enter text">
+
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet.
+    </p>
+</body>
+<script>
+    const text=document.querySelector('.text')
+    const paragraph=document.querySelector('.paragraph')
+
+    text.addEventListener('input',()=>{
+        paragraph.textContent=text.value;
+    })
+
+</script>
+</html>

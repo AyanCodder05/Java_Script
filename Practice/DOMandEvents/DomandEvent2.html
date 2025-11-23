@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM and Event</title>
+     <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="div" >
+        Div
+    </div>
+    <button class="show">
+        Click to show
+    </button>
+    <!-- <button class="hide">
+        Click to hide
+    </button>
+     -->
+</body>
+<script>
+    const btn=document.querySelector('.show')
+    //const hide=document.querySelector('.hide')
+    const div=document.querySelector('.div')
+
+    //btn.addEventListener('click',()=>{
+      //  div.classList.remove('hidden')
+    //})
+
+    //btn.addEventListener('click',()=>{
+       // div.classList.add('hidden')
+    //})
+
+    btn.addEventListener('click',()=>{
+        div.classList.toggle('hidden')
+         btn.textContent = div.classList.contains('hidden') 
+                      ? "Show Div" 
+                      : "Hide Div";
+    })
+
+</script>
+</html>

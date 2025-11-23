@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <h1 id="greating">
+        hello javascript
+    </h1>
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <button class="click">
+        click
+    </button>
+    <div class="display">Count=</div>
+    <script>
+        let count=0
+        const click=document.querySelector('.click')
+        const display=document.querySelector('.display')
+        click.addEventListener('click',(e)=>{
+            count++
+            //console.log(count)
+            display.innerHTML=`count= ${count}`
+        })
+
+        
+    </script>
+</body>
+</html>
